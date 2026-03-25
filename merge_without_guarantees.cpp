@@ -1,7 +1,7 @@
 template<class T>
 T * merge(const T * const * a, size_t sa, const size_t * sai, T * c)
 {
-  index = new size_t[sa]{0}; 		//возможно исключение из-за new
+  size_t * index = new size_t[sa]{0}; 		//возможно исключение из-за new
   size_t count = 0;
   for (size_t i = 0; i < sa; i++)
   {
@@ -21,7 +21,7 @@ T * merge(const T * const * a, size_t sa, const size_t * sai, T * c)
    {
      break;
    }
-   temp = new T[counter];	//опять же возможно исключение из-за new
+   T * temp = new T[counter];	//опять же возможно исключение из-за new
    size_t id = 0;
    for(size_t i = 0; i < sa; i++)
    {
